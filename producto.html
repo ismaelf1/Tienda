@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Producto | ISDAY</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+        }
+
+
+        body {
+
+            background:
+                #080808;
+
+            color:
+                white;
+
+            overflow-x:
+                hidden;
+
+        }
+
+
+        /* =================================
+           HEADER
+        ================================= */
+
+        header {
+
+            position:
+                fixed;
+
+            top:
+                0;
+
+            left:
+                0;
+
+            width:
+                100%;
+
+            padding:
+                20px 7%;
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            background:
+                rgba(8,8,8,.8);
+
+            backdrop-filter:
+                blur(15px);
+
+            border-bottom:
+                1px solid #222;
+
+            z-index:
+                1000;
+
+        }
+
+
+        .logo {
+
+            font-size:
+                28px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                4px;
+
+        }
+
+
+        .back {
+
+            color:
+                white;
+
+            text-decoration:
+                none;
+
+            padding:
+                10px 18px;
+
+            border:
+                1px solid #333;
+
+            border-radius:
+                30px;
+
+            transition:
+                .3s;
+
+        }
+
+
+        .back:hover {
+
+            background:
+                white;
+
+            color:
+                black;
+
+        }
+
+
+        /* =================================
+           PRODUCTO
+        ================================= */
+
+        .product-page {
+
+            min-height:
+                100vh;
+
+            padding:
+                130px 7% 70px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.2fr 1fr;
+
+            gap:
+                60px;
+
+            align-items:
+                center;
+
+        }
+
+
+        /* =================================
+           GALERÍA
+        ================================= */
+
+        .gallery {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                15px;
+
+        }
+
+
+        .gallery img {
+
+            width:
+                100%;
+
+            height:
+                260px;
+
+            object-fit:
+                cover;
+
+            border-radius:
+                18px;
+
+            cursor:
+                pointer;
+
+            border:
+                1px solid #222;
+
+            transition:
+                .4s;
+
+        }
+
+
+        .gallery img:first-child {
+
+            grid-column:
+                span 2;
+
+            height:
+                480px;
+
+        }
+
+
+        .gallery img:hover {
+
+            transform:
+                scale(1.03);
+
+            border-color:
+                #666;
+
+        }
+
+
+        /* =================================
+           INFORMACIÓN
+        ================================= */
+
+        .info {
+
+            animation:
+                aparecer .8s ease;
+
+        }
+
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity:
+                    0;
+
+                transform:
+                    translateX(40px);
+
+            }
+
+            to {
+
+                opacity:
+                    1;
+
+                transform:
+                    translateX(0);
+
+            }
+
+        }
+
+
+        .category {
+
+            color:
+                #777;
+
+            letter-spacing:
+                4px;
+
+            font-size:
+                12px;
+
+        }
+
+
+        .info h1 {
+
+            font-size:
+                clamp(
+                    40px,
+                    6vw,
+                    75px
+                );
+
+            margin:
+                15px 0;
+
+        }
+
+
+        .price {
+
+            font-size:
+                30px;
+
+            font-weight:
+                bold;
+
+            margin-bottom:
+                25px;
+
+        }
+
+
+        .description {
+
+            color:
+                #999;
+
+            line-height:
+                1.8;
+
+            margin-bottom:
+                30px;
+
+        }
+
+
+        /* =================================
+           DETALLES
+        ================================= */
+
+        .details {
+
+            border-top:
+                1px solid #292929;
+
+            border-bottom:
+                1px solid #292929;
+
+            padding:
+                20px 0;
+
+            margin-bottom:
+                30px;
+
+        }
+
+
+        .detail {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            padding:
+                8px 0;
+
+            color:
+                #888;
+
+        }
+
+
+        .detail strong {
+
+            color:
+                white;
+
+        }
+
+
+        /* =================================
+           BOTÓN
+        ================================= */
+
+        .buy {
+
+            width:
+                100%;
+
+            padding:
+                17px;
+
+            border:
+                none;
+
+            border-radius:
+                12px;
+
+            background:
+                white;
+
+            color:
+                black;
+
+            font-weight:
+                bold;
+
+            font-size:
+                15px;
+
+            cursor:
+                pointer;
+
+            transition:
+                .3s;
+
+        }
+
+
+        .buy:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 15px 40px
+                rgba(255,255,255,.12);
+
+        }
+
+
+        /* =================================
+           WHATSAPP
+        ================================= */
+
+        .whatsapp {
+
+            display:
+                block;
+
+            text-align:
+                center;
+
+            margin-top:
+                15px;
+
+            padding:
+                17px;
+
+            border-radius:
+                12px;
+
+            background:
+                #25D366;
+
+            color:
+                white;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                bold;
+
+            transition:
+                .3s;
+
+        }
+
+
+        .whatsapp:hover {
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        /* =================================
+           RESPONSIVE
+        ================================= */
+
+        @media(max-width:800px) {
+
+
+            .product-page {
+
+                grid-template-columns:
+                    1fr;
+
+                padding:
+                    120px 5% 50px;
+
+            }
+
+
+            .gallery img {
+
+                height:
+                    180px;
+
+            }
+
+
+            .gallery img:first-child {
+
+                height:
+                    330px;
+
+            }
+
+
+            .info h1 {
+
+                font-size:
+                    45px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     HEADER
+================================= -->
+
+<header>
+
+
+    <div class="logo">
+
+        ISDAY
+
+    </div>
+
+
+    <a
+        href="index.html"
+        class="back">
+
+        ← Volver al catálogo
+
+    </a>
+
+
+</header>
+
+
+
+<!-- =================================
+     PRODUCTO
+================================= -->
+
+<main
+    class="product-page">
+
+
+    <!-- GALERÍA -->
+
+    <div
+        class="gallery">
+
+
+        <img
+            id="imagen1"
+            src=""
+            alt="">
+
+
+        <img
+            id="imagen2"
+            src=""
+            alt="">
+
+
+        <img
+            id="imagen3"
+            src=""
+            alt="">
+
+
+    </div>
+
+
+
+    <!-- INFORMACIÓN -->
+
+    <div
+        class="info">
+
+
+        <span
+            class="category"
+            id="categoria">
+
+            ISDAY / CAPS
+
+        </span>
+
+
+        <h1
+            id="nombre">
+
+            Cargando...
+
+        </h1>
+
+
+        <div
+            class="price"
+            id="precio">
+
+            $0.00
+
+        </div>
+
+
+        <p
+            class="description"
+            id="descripcion">
+
+            Cargando descripción...
+
+        </p>
+
+
+        <div
+            class="details">
+
+
+            <div
+                class="detail">
+
+                <span>
+                    Marca
+                </span>
+
+                <strong>
+                    ISDAY
+                </strong>
+
+            </div>
+
+
+            <div
+                class="detail">
+
+                <span>
+                    Categoría
+                </span>
+
+                <strong
+                    id="tipo">
+
+                    Gorra
+
+                </strong>
+
+            </div>
+
+
+            <div
+                class="detail">
+
+                <span>
+                    Color
+                </span>
+
+                <strong
+                    id="color">
+
+                    Negro
+
+                </strong>
+
+            </div>
+
+
+            <div
+                class="detail">
+
+                <span>
+                    Estilo
+                </span>
+
+                <strong>
+
+                    Streetwear
+
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <button
+            class="buy"
+            onclick="comprar()">
+
+            🛒 COMPRAR AHORA
+
+        </button>
+
+
+
+        <a
+            class="whatsapp"
+            id="whatsapp"
+            target="_blank">
+
+            💬 PEDIR POR WHATSAPP
+
+        </a>
+
+
+    </div>
+
+
+</main>
+
+
+
+<script>
+
+
+/* =================================
+   PRODUCTOS
+================================= */
+
+
+const productos = {
+
+
+    gorra1: {
+
+        nombre:
+            "ISDAY BLACK CAP",
+
+        precio:
+            "$20.00",
+
+        categoria:
+            "ISDAY / CAPS",
+
+        tipo:
+            "Gorra",
+
+        color:
+            "Negro",
+
+        descripcion:
+
+            "Nuestra ISDAY Black Cap combina un diseño limpio con una estética urbana y moderna. Perfecta para completar cualquier outfit y representar el estilo ISDAY.",
+
+        imagen1:
+            "imagenes/gorra1.jpg",
+
+        imagen2:
+            "imagenes/gorra1-2.jpg",
+
+        imagen3:
+            "imagenes/gorra1-3.jpg"
+
+    },
+
+
+    gorra2: {
+
+        nombre:
+            "ISDAY PREMIUM",
+
+        precio:
+            "$25.00",
+
+        categoria:
+            "ISDAY / CAPS",
+
+        tipo:
+            "Gorra",
+
+        color:
+            "Negro",
+
+        descripcion:
+
+            "Diseño premium de ISDAY pensado para quienes buscan una estética urbana, limpia y diferente.",
+
+        imagen1:
+            "imagenes/gorra2.jpg",
+
+        imagen2:
+            "imagenes/gorra2-2.jpg",
+
+        imagen3:
+            "imagenes/gorra2-3.jpg"
+
+    },
+
+
+    gorra3: {
+
+        nombre:
+            "ISDAY URBAN",
+
+        precio:
+            "$22.00",
+
+        categoria:
+            "ISDAY / CAPS",
+
+        tipo:
+            "Gorra",
+
+        color:
+            "Gris",
+
+        descripcion:
+
+            "La ISDAY Urban lleva un estilo callejero y moderno. Un diseño pensado para combinar con outfits casuales y streetwear.",
+
+        imagen1:
+            "imagenes/gorra3.jpg",
+
+        imagen2:
+            "imagenes/gorra3-2.jpg",
+
+        imagen3:
+            "imagenes/gorra3-3.jpg"
+
+    },
+
+
+    camiseta1: {
+
+        nombre:
+            "ISDAY OVERSIZED",
+
+        precio:
+            "$30.00",
+
+        categoria:
+            "ISDAY / CLOTHING",
+
+        tipo:
+            "Camiseta",
+
+        color:
+            "Negro",
+
+        descripcion:
+
+            "Camiseta oversized ISDAY. Producto de próxima colección.",
+
+        imagen1:
+            "imagenes/camiseta1.jpg",
+
+        imagen2:
+            "imagenes/camiseta1-2.jpg",
+
+        imagen3:
+            "imagenes/camiseta1-3.jpg"
+
+    },
+
+
+    hoodie1: {
+
+        nombre:
+            "ISDAY HOODIE",
+
+        precio:
+            "$45.00",
+
+        categoria:
+            "ISDAY / CLOTHING",
+
+        tipo:
+            "Hoodie",
+
+        color:
+            "Negro",
+
+        descripcion:
+
+            "Hoodie ISDAY de estilo urbano. Próximamente disponible.",
+
+        imagen1:
+            "imagenes/hoodie1.jpg",
+
+        imagen2:
+            "imagenes/hoodie1-2.jpg",
+
+        imagen3:
+            "imagenes/hoodie1-3.jpg"
+
+    }
+
+
+};
+
+
+
+/* =================================
+   OBTENER ID
+================================= */
+
+
+const parametros =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const id =
+    parametros.get("id");
+
+
+const producto =
+    productos[id];
+
+
+
+/* =================================
+   CARGAR PRODUCTO
+================================= */
+
+
+if(producto) {
+
+
+    document.getElementById(
+        "nombre"
+    ).textContent =
+        producto.nombre;
+
+
+    document.getElementById(
+        "precio"
+    ).textContent =
+        producto.precio;
+
+
+    document.getElementById(
+        "categoria"
+    ).textContent =
+        producto.categoria;
+
+
+    document.getElementById(
+        "tipo"
+    ).textContent =
+        producto.tipo;
+
+
+    document.getElementById(
+        "color"
+    ).textContent =
+        producto.color;
+
+
+    document.getElementById(
+        "descripcion"
+    ).textContent =
+        producto.descripcion;
+
+
+    document.getElementById(
+        "imagen1"
+    ).src =
+        producto.imagen1;
+
+
+    document.getElementById(
+        "imagen2"
+    ).src =
+        producto.imagen2;
+
+
+    document.getElementById(
+        "imagen3"
+    ).src =
+        producto.imagen3;
+
+
+    document.title =
+        producto.nombre +
+        " | ISDAY";
+
+
+
+    /* WHATSAPP */
+
+    const telefono =
+        "593999999999";
+
+
+    const mensaje =
+
+        `Hola ISDAY 👋, quiero comprar ${producto.nombre} por ${producto.precio}.`;
+
+
+    document.getElementById(
+        "whatsapp"
+    ).href =
+
+        "https://wa.me/" +
+
+        telefono +
+
+        "?text=" +
+
+        encodeURIComponent(
+            mensaje
+        );
+
+
+}
+
+
+/* =================================
+   COMPRAR
+================================= */
+
+
+function comprar() {
+
+
+    if(!producto) {
+
+        return;
+
+    }
+
+
+    const telefono =
+        "593999999999";
+
+
+    const mensaje =
+
+        `Hola ISDAY 👋, quiero comprar ${producto.nombre} por ${producto.precio}.`;
+
+
+    window.open(
+
+        "https://wa.me/" +
+
+        telefono +
+
+        "?text=" +
+
+        encodeURIComponent(
+            mensaje
+        ),
+
+        "_blank"
+
+    );
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
